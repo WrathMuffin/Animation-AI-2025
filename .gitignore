@@ -82,3 +82,7 @@ crashlytics-build.properties
 /LAB-01-CHARLEEN/obj
 /LAB-01-CHARLEEN/Library
 /LAB-01-CHARLEEN/Library
+*.md5
+*.asmdef
+*.meta
+*.graph
