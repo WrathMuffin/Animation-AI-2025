@@ -1,0 +1,27 @@
+ACT 1:
+For this act, I have spin the money wad while simultaneously move it up and down. These to actions lasts for 2 seconds.
+
+I've duplicate the same animation clip as the money wad onto the gold pile. Let's explore the curves for rotation on the y axis!
+
+a) When the clip plays following the curve of graph a, the gold pile spins near the end of the clip rather than spin as soon as the clip plays. At around the 1 second mark is where it really spins the most (which makes sense since the line rises up steeper than the beginning). Before that 1 second mark, the gold pile only lifts up off the ground with not much spins to it. Spin slower at the beginning than the end!
+
+b) This is actually the original curvature for this animation! The gold pile rotates as soon as the clip plays. It feels more evened out and uniform. It spins at the same rate throughout the 2 seconds clip. (Compared to the first graph a, the gold pile spins faster after 1 second passed). There is a slight slow down to the spin near the beginning and end of the clip!
+
+c) Compared to the previous two, this clip feels much closer to b, except it feels much more stiff. Graph b has fade in and out near the beginning and the end of the clip, which made the spin slower (fade in & out) as it begins and ends. This clip is completely uniform all the way, same speed throughout the clip.
+
+
+ACTC 2:
+
+Side by side shows that the gold bar must return to its original values for transformation (positions, rotations, scale...etc.).
+
+Now I will overlap the animations:
+
+The setting for the timeline is: Film 24fps.
+
+To have 15 frames overlapping per clip. Each must overlap around 63 millisecs (0.625 round up).
+
+(1/24 to get one frame per 0.042, times by 15 frames to get 15 frames per 0.625 seconds).
+
+I moved back each clip by 63 millisecs.
+
+Playing these clips again shows a major difference. The clip overlapping the previous clip starts to play (modify the objects transform values) before the object returns to its original values for its transformation. For example, this can be seen very noticeably for the transitioning between the 2nd and final rotation clip. As the bar returns to its original position, the bar starts to rotate before it reached it's final position.
