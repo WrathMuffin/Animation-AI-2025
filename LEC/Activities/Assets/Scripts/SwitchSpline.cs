@@ -11,7 +11,7 @@ public class SwitchSpline : MonoBehaviour
     public SplineContainer splineContainer;
 
     // how fast the chaarcter moves, how close the cistance of my character to teh knot to transition to the secon spline
-    public float speed = 1.0f, distToKnot = 0.5f;
+    public float speed = 1.0f, distToKnot = 0.0f, blendFactor = 0.5f;
 
     // when character is near the end knot of spline 0, theyll go to start knot of spline 1
     // vice versa when near the end knot oof spline 1
@@ -30,7 +30,7 @@ public class SwitchSpline : MonoBehaviour
     private Vector3 endKnot0Pos, starKnot1Pos,
                     endKnot1Pos, starKnot0Pos;
 
-    private float timeTakeToMoveOnSpline; // normalize so the character is runnign at cinsistent speed on the splein
+    private float timeTakeToMoveOnSpline, knotDist, lerpT; // normalize so the character is runnign at cinsistent speed on the splein
 
     // toggle switch, if is on the initial spline (spline0/first spline)
     private bool isSwitch = false, isInitSpline = true, isDoLerp = false;
@@ -101,31 +101,50 @@ public class SwitchSpline : MonoBehaviour
         {
             if (Vector3.Distance(transform.position, endKnot1Pos) <= distToKnot)
             {
+                isDoLerp = true;
+
                 isInitSpline = true;
+
+                if (Vector3.Distance(transform.position, starKnot0Pos) <= distToKnot)
+                {
+                    isDoLerp = false;
+                }
+
+                ResetNormal();
             }
         }
 
         if (isDoLerp)
         {
+
             if (!isInitSpline)
             {
-                transform.position = Vector3.Lerp(endKnot0Pos, starKnot1Pos, timeTakeToMoveOnSpline);
+                DoLerp(endKnot0Pos, starKnot1Pos);
             }
 
             if (isInitSpline)
             {
-                transform.position = Vector3.Lerp(endKnot1Pos, starKnot0Pos, timeTakeToMoveOnSpline);
+                DoLerp(endKnot1Pos, starKnot0Pos);
+            }
+
+            if (lerpT >= 1f) // 0 = the start, 1 = the end => when lepT reaches the end, resets
+            {
+                isDoLerp = false;
+                lerpT = 0;
             }
         }
 
-        if (isInitSpline)
+        if (!isDoLerp)
         {
-            MoveOnSpline(spline0);
-        }
+            if (isInitSpline)
+            {
+                MoveOnSpline(spline0);
+            }
 
-        if (!isInitSpline)
-        {
-            MoveOnSpline(spline1);
+            if (!isInitSpline)
+            {
+                MoveOnSpline(spline1);
+            }
         }
     }
 
@@ -134,32 +153,43 @@ public class SwitchSpline : MonoBehaviour
         // calculate the time it takes to move on the spline (from one point to the other)
         timeTakeToMoveOnSpline += speed * Time.deltaTime / num.GetLength();
 
-        if (!isDoLerp)
+        // checks if the spline is closed, if so then loop it (spline 1 is not a closed loop)
+        if (num.Closed)
         {
-            // checks if the spline is closed, if so then loop it (spline 1 is not a closed loop)
-            if (num.Closed)
+            // looping usign 0 (start) and 1 (ends)
+            if (timeTakeToMoveOnSpline > 1.0f)
             {
-                // looping usign 0 (start) and 1 (ends)
-                if (timeTakeToMoveOnSpline > 1.0f)
-                {
-                    timeTakeToMoveOnSpline -= 1.0f; // loop back to 0
-                }
+                timeTakeToMoveOnSpline -= 1.0f; // loop back to 0
             }
-
-            // pos and dir (rotate along) on the spline
-            pos = SplineUtility.EvaluatePosition(num, timeTakeToMoveOnSpline);
-            dir = SplineUtility.EvaluateTangent(num, timeTakeToMoveOnSpline);
-
-            // update noe pos and rotation dir
-            transform.position = pos;
-            transform.rotation = Quaternion.LookRotation(dir);
         }
+
+        // pos and dir (rotate along) on the spline
+        pos = SplineUtility.EvaluatePosition(num, timeTakeToMoveOnSpline);
+        dir = SplineUtility.EvaluateTangent(num, timeTakeToMoveOnSpline);
+
+        // update noe pos and rotation dir
+        transform.position = pos;
+        transform.rotation = Quaternion.LookRotation(dir);
+    }
+
+    void DoLerp(Vector3 PointA, Vector3 PointB)
+    {
+        knotDist = Vector3.Distance(PointA, PointB);
+        lerpT += (speed * Time.deltaTime) / knotDist;
+
+        // direction
+        Vector3 dir = (PointB - PointA).normalized;
+
+        // move and rotates smoothly between two knots positions following the player's speed
+        transform.position = Vector3.Lerp(PointA, PointB, lerpT);
+        transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(dir, Vector3.up), lerpT);
+
     }
 
     // reset normal,
     // it was in its own function becuase it was used for debugging purpose, now i dont want to move it out... EVER
     void ResetNormal()
     {
-        timeTakeToMoveOnSpline = 0f;
+        timeTakeToMoveOnSpline = 0;
     }
 }
