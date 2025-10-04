@@ -11,6 +11,7 @@
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 *.log
+<<<<<<< Updated upstream
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
@@ -86,3 +87,13 @@ crashlytics-build.properties
 *.asmdef
 *.meta
 *.graph
+=======
+/LEC/Activities/.vs
+/LEC/Activities/Temp
+>>>>>>> Stashed changes
+/LAB-01-CHARLEEN/Library
+/LAB-02-CHARLEEN/UserSettings
+/LEC/Activities/Library
+/LEC/Activities/obj
+/LEC/Activities/UserSettings
+*.json
