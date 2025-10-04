@@ -5,3 +5,7 @@
 ● TERM: FALL 2025 
 
 ● STUDENT NAME: [CHARLEEN CHU]
+
+
+LEC - In class activities!!!
+TUT - Labs and stuff!!!!!!
