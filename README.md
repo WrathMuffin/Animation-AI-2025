@@ -8,4 +8,5 @@
 
 
 LEC - In class activities!!!
+
 TUT - Labs and stuff!!!!!!
