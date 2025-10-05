@@ -10,3 +10,8 @@
 /LEC/Activities/Logs
 /LEC/Activities/Temp
 *.log
+/LAB/.vs
+/LAB/Library
+/LAB/obj
+/LAB/Temp
+/LAB/UserSettings
