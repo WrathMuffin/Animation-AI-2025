@@ -14,15 +14,21 @@ public class PathController : MonoBehaviour
     List<Waypoint> thePath;
     Waypoint target; // current target waypoint
 
+    Rigidbody rb;
+
     // movement and rotation parameters
     public float moveSpeed = 3f, rotSpeed = 1f;
 
-    bool isWalk;
+    bool isWalk, isTouchWall;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
+
         isWalk = false;
+        isTouchWall = false;
+
         anime.SetBool("isWalk", isWalk);
 
         thePath = pathManager.GetPath();
@@ -32,6 +38,60 @@ public class PathController : MonoBehaviour
         {
             // set the target to the first waypoint
             target = thePath[0];
+        }
+    }
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.anyKeyDown)
+        {
+            // toggle walking state when any key is pressed
+            isWalk = !isWalk;
+        }
+
+        if (isWalk)
+        {
+            // walk when togglesd on
+            RotateToTarget();
+            MoveForward();
+
+        }
+
+        // if is touhcing wall, only idle is allowed
+        if (isTouchWall)
+        {
+            anime.SetBool("isWalk", false);
+        }
+
+        // anythign else, allows the animation to be togleable
+        else
+        {
+            anime.SetBool("isWalk", isWalk);
+        }
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        //switch to next target if we collide with the current target
+        target = pathManager.GetNextTarget();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        // idle when touching wall
+        if (collision.gameObject.tag == "Wall")
+        {
+            isTouchWall = true;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        // idle when not toichgin wall
+        if (collision.gameObject.tag == "Wall")
+        {
+            isTouchWall = false;
         }
     }
 
@@ -64,38 +124,6 @@ public class PathController : MonoBehaviour
         }
 
         // move forward
-        transform.Translate(Vector3.forward * stepSize);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.anyKeyDown)
-        {
-            // toggle walking state when any key is pressed
-            isWalk = !isWalk;
-        }
-
-        if (isWalk)
-        {
-            // walk when togglesd on
-            RotateToTarget();
-            MoveForward();
-        }
-
-        anime.SetBool("isWalk", isWalk);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        //switch to next target if we collide with the current target
-        target = pathManager.GetNextTarget();
-    }
-
-    private void OnCollisionStay(Collision collision)
-    {
-        // idle when touching wall
-        //isWalk = false;
-        //anime.SetBool("isWalk", false);
+        rb.MovePosition(transform.position + transform.forward * stepSize);
     }
 }

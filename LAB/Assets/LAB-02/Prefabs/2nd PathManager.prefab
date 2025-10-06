@@ -45,9 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path:
-  - pos: {x: 1.5, y: 0, z: -4}
-  - pos: {x: 2, y: 0, z: -11.5}
-  - pos: {x: -3, y: 0, z: -10}
-  - pos: {x: -3, y: 0, z: -6}
+  - pos: {x: 1.5, y: 0, z: -6}
+  - pos: {x: 3, y: 0, z: -10.5}
+  - pos: {x: -1, y: 0, z: -11.5}
+  - pos: {x: -3, y: 0, z: -7.5}
   prefabPoints: []
-  spherePrefab: {fileID: 3199191419758592364, guid: fca31a99438942246a302851a4c36400, type: 3}
+  spherePrefab: {fileID: 3199191419758592364, guid: 340c5e1946f0b0b4b94cdc77bb955d47, type: 3}

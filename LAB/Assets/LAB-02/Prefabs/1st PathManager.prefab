@@ -45,12 +45,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path:
-  - pos: {x: -3, y: 0, z: -2}
-  - pos: {x: 3, y: 0, z: 1}
-  - pos: {x: -1, y: 0, z: 3}
-  - pos: {x: -3, y: 0, z: 2}
-  - pos: {x: 1, y: 0, z: 2}
-  - pos: {x: 3, y: 0, z: -2}
-  - pos: {x: -1, y: 0, z: -4}
+  - pos: {x: 1.5, y: 0, z: -2}
+  - pos: {x: 3, y: 0, z: 1.5}
+  - pos: {x: -3, y: 0, z: 3.5}
+  - pos: {x: -2.5, y: 0, z: 1.5}
+  - pos: {x: 1, y: 0, z: 3}
+  - pos: {x: 3.5, y: 0, z: -4}
+  - pos: {x: -2.5, y: 0, z: -4.5}
   prefabPoints: []
   spherePrefab: {fileID: 3199191419758592364, guid: fca31a99438942246a302851a4c36400, type: 3}
