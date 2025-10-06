@@ -105,3 +105,7 @@ LAB-01-CHARLEEN/Library/PackageCache/com.unity.collections@56bff8827a7e/Unity.Co
 LAB-01-CHARLEEN/Library/PackageCache/com.unity.collections@56bff8827a7e/Unity.Collections.LowLevel.ILSupport/source~/Unity.Collections.LowLevel.ILSupport.CodeGen/CollectionsUnsafeUtilityPostProcessor.cs.meta
 LAB-01-CHARLEEN/Library/PackageCache/com.unity.collections@56bff8827a7e/Unity.Collections.LowLevel.ILSupport/source~/Unity.Collections.LowLevel.ILSupport.CodeGen/Unity.Collections.LowLevel.ILSupport.CodeGen.asmdef
 LAB-01-CHARLEEN/Library/PackageCache/com.unity.collections@56bff8827a7e/Unity.Collections.LowLevel.ILSupport/source~/Unity.Collections.LowLevel.ILSupport.CodeGen/Unity.Collections.LowLevel.ILSupport.CodeGen.asmdef.meta
+/LAB/Library
+/LAB/obj
+/LAB/Temp
+/LAB/UserSettings
