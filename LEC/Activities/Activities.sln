@@ -9,10 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Splines.Examples.Editor", "Unity.Splines.Examples.Editor.csproj", "{2793021A-7280-1EF8-C6C9-E3F829699F63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Splines.Examples", "Unity.Splines.Examples.Player.csproj", "{06CAF1EB-257A-5D62-4F29-F5F12BC3CAD9}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.Player.csproj", "{817AFD22-CB41-D481-1036-3BA984553B3E}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,14 +31,6 @@ Global
 		{2793021A-7280-1EF8-C6C9-E3F829699F63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2793021A-7280-1EF8-C6C9-E3F829699F63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2793021A-7280-1EF8-C6C9-E3F829699F63}.Release|Any CPU.Build.0 = Release|Any CPU
-		{06CAF1EB-257A-5D62-4F29-F5F12BC3CAD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{06CAF1EB-257A-5D62-4F29-F5F12BC3CAD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{06CAF1EB-257A-5D62-4F29-F5F12BC3CAD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{06CAF1EB-257A-5D62-4F29-F5F12BC3CAD9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{817AFD22-CB41-D481-1036-3BA984553B3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{817AFD22-CB41-D481-1036-3BA984553B3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{817AFD22-CB41-D481-1036-3BA984553B3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{817AFD22-CB41-D481-1036-3BA984553B3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
