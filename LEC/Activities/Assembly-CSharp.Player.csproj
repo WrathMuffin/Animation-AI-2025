@@ -62,13 +62,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\SwitchSpline.cs" />
+    <Compile Include="Assets\Scripts\NavControl.cs" />
     <Compile Include="Assets\Scripts\SwitchView.cs" />
-    <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Scripts\FollowSpline.cs" />
+    <Compile Include="Assets\z-Others\TutorialInfo\Scripts\Readme.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Samples\Splines\2.8.1\Spline Examples (requires Shader Graph package)\UXML\PaintUI.uxml" />
-    <None Include="Assets\Samples\Splines\2.8.1\Spline Examples (requires Shader Graph package)\Shader\InterpolateSpline.compute" />
+    <None Include="Assets\z-Others\Samples\Splines\2.8.1\Spline Examples (requires Shader Graph package)\UXML\PaintUI.uxml" />
+    <None Include="Assets\z-Others\Samples\Splines\2.8.1\Spline Examples (requires Shader Graph package)\Shader\InterpolateSpline.compute" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -943,6 +944,10 @@
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Unity.ProBuilder">
+      <HintPath>Library\ScriptAssemblies\Unity.ProBuilder.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
       <Private>False</Private>
@@ -980,6 +985,10 @@
     <ProjectReference Include="Unity.Splines.Examples.Player.csproj">
       <Project>{06CAF1EB-257A-5D62-4F29-F5F12BC3CAD9}</Project>
       <Name>Unity.Splines.Examples.Player</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.AI.Navigation.Samples.Player.csproj">
+      <Project>{E194F79B-08DD-BD2C-A784-D25A5CCCBC7C}</Project>
+      <Name>Unity.AI.Navigation.Samples.Player</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
