@@ -462,9 +462,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 1
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!136 &151149677
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -523,8 +523,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1247176379}
-  navSpeed: 2.45
+  navSpeed: 1.5
   clipSpeed: 2.07
+  rotSpeed: 1
 --- !u!1001 &198206770
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1978,6 +1979,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CHaracter (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7322683846189660863, guid: d87c116ccce5dd24e8ed6c2ec4d0b8d0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2013,8 +2018,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 423065099}
-  navSpeed: 4.63
+  navSpeed: 3.5
   clipSpeed: 4.03
+  rotSpeed: 1
 --- !u!195 &665300108
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -2084,9 +2090,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 1
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &704385125
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4093,6 +4099,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CHaracter (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7322683846189660863, guid: d87c116ccce5dd24e8ed6c2ec4d0b8d0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4128,8 +4138,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 465490992}
-  navSpeed: 8.19
+  navSpeed: 5.5
   clipSpeed: 8.54
+  rotSpeed: 1
 --- !u!195 &1921180934
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -4199,9 +4210,9 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 1
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1001 &1923579569
 PrefabInstance:
   m_ObjectHideFlags: 0

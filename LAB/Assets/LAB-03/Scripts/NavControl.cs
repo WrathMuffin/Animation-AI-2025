@@ -56,6 +56,15 @@ public class NavControl : MonoBehaviour
         }
     }
 
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.name == "Target")
+        {
+            isWalking = false;
+            animator.SetTrigger("ATTACK");
+        }
+    }
+
     private void OnTriggerExit(Collider other)
     {
         if (other.name == "Target")
