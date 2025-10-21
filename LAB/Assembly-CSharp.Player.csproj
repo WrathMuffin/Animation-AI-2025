@@ -55,7 +55,7 @@
     <UnityVersion>6000.0.58f2</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="D:\Apps\Visual Studio\Application\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
     <Analyzer Include="D:\Unity\Editor\6000.0.58f2\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll" />
     <Analyzer Include="D:\Unity\Editor\6000.0.58f2\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
     <Analyzer Include="D:\Unity\Editor\6000.0.58f2\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\LAB-02\Scripts\PathManager.cs" />
     <Compile Include="Assets\LAB-02\Scripts\Waypoint.cs" />
+    <Compile Include="Assets\LAB-03\Scripts\NavControl.cs" />
     <Compile Include="Assets\Others\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\LAB-02\Scripts\PathController.cs" />
     <Compile Include="Assets\LAB-02\Scripts\PathMngEditor.cs" />
