@@ -61,21 +61,21 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.60f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\FastIK\Scripts\FastIK\FastIKLook.cs" />
-    <Compile Include="Assets\FastIK\Scripts\Sample\SampleSinMover.cs" />
-    <Compile Include="Assets\FastIK\Scripts\Sample\SampleProcedualAnimation.cs" />
+    <Compile Include="Assets\Imported\FastIK\Scripts\Sample\SampleSinMover.cs" />
+    <Compile Include="Assets\Imported\FastIK\Scripts\Sample\SampleRotator.cs" />
     <Compile Include="Assets\Scripts\SwitchSpline.cs" />
-    <Compile Include="Assets\FastIK\Scripts\FastIK\FastIKCCD.cs" />
-    <Compile Include="Assets\FastIK\Scripts\FastIK\FastIKFabric.cs" />
+    <Compile Include="Assets\Imported\FastIK\Scripts\FastIK\FastIKFabric.cs" />
+    <Compile Include="Assets\Imported\FastIK\Scripts\FastIK\FastIKCCD.cs" />
+    <Compile Include="Assets\Imported\FastIK\Scripts\Sample\SampleProcedualAnimation.cs" />
     <Compile Include="Assets\Scripts\NavControl.cs" />
+    <Compile Include="Assets\Imported\FastIK\Scripts\FastIK\FastIKLook.cs" />
     <Compile Include="Assets\Scripts\SwitchView.cs" />
     <Compile Include="Assets\Scripts\FollowSpline.cs" />
     <Compile Include="Assets\z-Others\TutorialInfo\Scripts\Readme.cs" />
-    <Compile Include="Assets\FastIK\Scripts\Sample\SampleRotator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\z-Others\Samples\Splines\2.8.1\Spline Examples (requires Shader Graph package)\UXML\PaintUI.uxml" />
-    <None Include="Assets\FastIK\Documentation.txt" />
+    <None Include="Assets\Imported\FastIK\Documentation.txt" />
     <None Include="Assets\z-Others\Samples\Splines\2.8.1\Spline Examples (requires Shader Graph package)\Shader\InterpolateSpline.compute" />
   </ItemGroup>
   <ItemGroup>
