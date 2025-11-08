@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="Assets\LAB-02\Scripts\PathManager.cs" />
     <Compile Include="Assets\LAB-02\Scripts\Waypoint.cs" />
+    <Compile Include="Assets\LAB-04\Script\Animation controller.cs" />
     <Compile Include="Assets\LAB-03\Scripts\NavControl.cs" />
     <Compile Include="Assets\Others\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\LAB-02\Scripts\PathController.cs" />
